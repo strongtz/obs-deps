@@ -2,12 +2,12 @@ autoload -Uz log_debug log_error log_info log_status log_output
 
 ## Dependency Information
 local name='swig'
-local version='1.6.37'
+local version='4.1.0'
 local url='https://github.com/swig/swig.git'
-local hash="4dd285fad736c014224ef2ad25b85e17f3dce1f9"
+local hash="1e99e4fe37c0f2334b6de1c6bc3fcd3188bc2c92"
 local patches=(
   "${0:a:h}/patches/swig/0001-add-Python-3-stable-abi.patch \
-  08e41977a897d0b4d6832ea9acfcba510ae8317344620e039b0703a910ad23bf"
+  756a5820168d96d0c50e8ae4b4bb71041b11ec52557f78fbe4db20fe73f2db1e"
 )
 
 ## Build Steps
