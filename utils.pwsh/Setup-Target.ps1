@@ -52,6 +52,12 @@ function Setup-BuildParameters {
         '--no-warn-unused-cli'
     )
 
+    if ( $env:CI ) {
+        $script:CmakeOptions += @(
+            "-DCMAKE_IGNORE_PREFIX_PATH=C:\Strawberry\c"
+        )
+    }
+
     if ( $script:Quiet ) {
         $script:CmakeOptions += @(
             '-Wno-deprecated', '-Wno-dev', '--log-level=ERROR'
