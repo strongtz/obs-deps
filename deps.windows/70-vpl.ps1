@@ -3,7 +3,8 @@ param(
     [string] $Version = 'v2.12.0',
     [string] $Uri = 'https://github.com/intel/libvpl.git',
     [string] $Hash = '0c13c410095764799afea0cf645bd896378579b8',
-    [switch] $ForceStatic = $true
+    [switch] $ForceStatic = $true,
+    [array] $Targets = @('x64', 'x86')
 )
 
 function Setup {
